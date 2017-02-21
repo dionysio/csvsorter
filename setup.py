@@ -15,6 +15,6 @@ setup(
     long_description=read('README.rst'),
     keywords=['csv', 'sort', 'large csv'],
     url='https://github.com/dionysio/csvsorter',
-    download_url = 'https://github.com/dionysio/csvsorter/tarball/1.4'
+    download_url = 'https://github.com/dionysio/csvsorter/tarball/1.4',
     license='lgpl',
 )
