@@ -1,6 +1,6 @@
-========
-CSV Sort
-========
+==========
+CSV Sorter
+==========
 
 Fork of the csvsort_ for Python 3.
 For sorting CSV files on disk that do not fit into memory. The merge sort algorithm is used to break up the original file into smaller chunks, sort these in memory, and then merge these sorted files.
@@ -33,6 +33,6 @@ Install
 
 .. sourcecode:: bash
 
-    $ pip install csvsort
+    $ pip install csvsorter
 
 ..
