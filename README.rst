@@ -2,10 +2,10 @@
 CSV Sort
 ========
 
-Fork of the [csvsort_](https://bitbucket.org/richardpenman/csvsort) for Python 3.
+Fork of the csvsort_ for Python 3.
 For sorting CSV files on disk that do not fit into memory. The merge sort algorithm is used to break up the original file into smaller chunks, sort these in memory, and then merge these sorted files.
 
-.. _csvsort: http://www.python.org/
+.. _csvsort: https://bitbucket.org/richardpenman/csvsort
 
 =============
 Example usage
