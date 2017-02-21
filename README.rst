@@ -13,7 +13,7 @@ Example usage
 
 .. sourcecode:: python
 
-    >>> from csvsort import csvsort
+    >>> from csvsorter import csvsort
     >>> # sort this CSV on the 5th and 3rd columns (columns are 0 indexed)
     >>> csvsort('test1.csv', [4,2])  
     >>> # sort this CSV with no header on 4th column and save results to separate file
