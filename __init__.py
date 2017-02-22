@@ -59,7 +59,7 @@ def parse_columns(columns, header):
     """
     for i, column in enumerate(columns):
         if isinstance(column, int):
-            if header and column >= len(header):
+            if (header and column >= len(header)):
                 raise CsvSortError('Column index is out of range: "{}"'.format(column))
         else:
             # find index of column from header
@@ -150,7 +150,6 @@ def main():
         parser.error('Which columns should be sorted on?')
     else:
         # escape backslashes
-        args.delimiter = args.delimiter.decode("string_escape")
         args.columns = [int(column) if column.isdigit() else column for column in args.columns]
         csvsort(input_files[0], columns=args.columns, max_size=args.max_size, has_header=args.has_header, delimiter=args.delimiter, encoding=args.encoding)
 
