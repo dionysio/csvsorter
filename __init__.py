@@ -36,7 +36,6 @@ def csvsort(input_filename, columns, output_filename='', max_size=100, has_heade
             columns = parse_columns(columns, header)
 
             filenames = csvsplit(reader, max_size, encoding, tmp_dir)
-            print('Merging {} splits'.format(len(filenames)))
             for filename in filenames:
                 memorysort(filename, columns, encoding)
             sorted_filename = mergesort(filenames, columns, tmp_dir=tmp_dir, encoding=encoding)
