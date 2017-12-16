@@ -79,19 +79,25 @@ def csvsplit(reader, max_size, encoding, tmp_dir):
     writer = None
     current_size = 0
     split_filenames = []
+    fout = None
 
     # break CSV file into smaller merge files
     for row in reader:
         if not writer:
             filename = os.path.join(tmp_dir, 'split{}.csv'.format(len(split_filenames)))
-            writer = csv.writer(open(filename, 'w', newline='\n', encoding=encoding))
+            fout = open(filename, 'w', newline='\n', encoding=encoding)
+            writer = csv.writer(fout)
             split_filenames.append(filename)
 
         writer.writerow(row)
         current_size += sys.getsizeof(row)
         if current_size > max_size:
             writer = None
+            fout.close()
             current_size = 0
+
+    if not fout.closed:
+      fout.close()
     return split_filenames
 
 
